@@ -3,6 +3,7 @@ package com.dio.stander.bankline.api.model;
 public class Conta {
 	private Long numeo;
 	private Double saldo;
+	
 	public Long getNumeo() {
 		return numeo;
 	}
