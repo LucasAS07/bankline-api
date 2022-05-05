@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
+
 @Entity 
 @Table(name = "tab_movimentacao")
 public class Movimentacao {
@@ -29,6 +30,10 @@ public class Movimentacao {
 	
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
+	
+	@Column(name = "idConta")
+	private Integer idConta;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -60,5 +65,11 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 	
+	public Integer getIdConta() {
+		return idConta;
+	}
 	
+	public void setidConta(Integer idConta) {
+		this.idConta = idConta;
+	}
 }

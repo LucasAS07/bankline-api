@@ -2,6 +2,7 @@ package com.dio.stander.bankline.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +23,7 @@ public class Correntista {
 	@Column(length = 20)
 	private String cpf;
 	
-	@Embeddable
+	@Embedded
 	private Conta conta;
 	
 	private void getconta() {
