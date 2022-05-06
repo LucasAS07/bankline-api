@@ -26,15 +26,15 @@ public class Correntista {
 	@Embedded
 	private Conta conta;
 	
-	private void getconta() {
-		// TODO Auto-generated method stub
+	
 
+	public Conta getConta() {
+		return conta;
+	}
+	public void setConta(Conta conta) {
+		this.conta = conta;
 	}
 	
-	private void voidconta() {
-		// TODO Auto-generated method stub
-
-	}
 	public Integer getId() {
 		return id;
 	}

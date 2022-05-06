@@ -7,28 +7,32 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.dio.stander.bankline.api.repository.CorrentistaRepository;
+import com.dio.stander.bankline.api.repository.MovimentacaoRepository;
 import com.dio.stander.bankline.api.service.CorrentistaService;
+import com.dio.stander.bankline.api.service.MovimentacaoService;
+import com.dio.stander.bankline.api.dto.NovaMovimentacao;
 import com.dio.stander.bankline.api.dto.NovoCorrentista;
 import com.dio.stander.bankline.api.model.Correntista;
+import com.dio.stander.bankline.api.model.Movimentacao;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/correntistas")
-public class CorrentistaControler {
+@RequestMapping("/movimentacoes")
+public class MovimentacaoControler {
 	@Autowired
-	private CorrentistaRepository repository;
+	private MovimentacaoRepository repository;
 	
 	@Autowired
-	private CorrentistaService service;
+	private MovimentacaoService service;
 	
 	@GetMapping
-	public List<Correntista> findAll(){
+	public List<Movimentacao> findAll(){
 		return repository.findAll();
 	}
 	
 	@PostMapping
-	public void save(@RequestBody NovoCorrentista correntista) {
-		service.save(correntista);
+	public void save(@RequestBody NovaMovimentacao movimentacao) {
+		service.save(movimentacao);
 	}
 }

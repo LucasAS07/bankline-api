@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.dio.stander.bankline.api.dto.NovoCorrentista;
 import com.dio.stander.bankline.api.model.Conta;
 import com.dio.stander.bankline.api.model.Correntista;
@@ -23,7 +24,7 @@ public class CorrentistaService {
 		conta.setSaldo(0.0);
 		conta.setNumeo(new Date().getTime());
 		
-		correntista.set
+		correntista.setConta(conta);
 		repository.save(correntista);
 		}
 }
